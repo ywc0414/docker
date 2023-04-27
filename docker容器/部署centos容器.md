@@ -1,0 +1,59 @@
+###### 拉取镜像
+
+```shell
+docker pull centos:7
+```
+
+###### 运行容器
+
+```shell
+docker -it --name centos7 centos:7
+```
+
+> [!COMMENT]
+> - --rm：容器退出后，自动删除容器及数据挂载卷，相当于执行命令：docker rm -v
+> - -i：标准输入
+> - -t：分配个伪终端tty
+> - -d：容器后台运行
+> - --name：容器名称
+> - centos:7：镜像名称
+
+
+
+###### 进入容器
+
+```shell
+# 进入容器
+docker exec -it centos7 bash
+
+# 查询是否安装lrzsz
+yum list lrzsz
+rpm -q lrzsz
+
+# 安装lrzsz
+yum install lrzsz
+```
+
+###### 提交容器
+
+```
+docker commit -a "yangwencheng" -c "installed lrzsz" centos7 mycentos:1.0.0
+```
+
+> [!COMMENT]
+> docker commit --help
+> - -a：作者
+> - -m：描述
+
+
+
+###### 推送至镜像仓库
+
+```shell
+# 登录镜像仓库
+docker login xxx.xxx.xx
+
+# 推送镜像
+docker push xxx.xxx.xx/xxx/mycentos:1.0.0
+```
+
