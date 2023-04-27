@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>2.1 镜像的导出导入 · 《Docker从入门到放弃》</title>
+        <title>3.3 容器的提交 · 《Docker从入门到放弃》</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -78,6 +78,8 @@
 
     
     
+    <link rel="prev" href="容器的导出导入.html" />
+    
 
     </head>
     <body>
@@ -123,7 +125,7 @@
                 <span>
             
                     
-                    第1章 docker安装
+                    第一章 Docker Engine
             
                 </span>
             
@@ -132,9 +134,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../docker安装/centos安装docker.html">
+        <li class="chapter " data-level="1.2.1" data-path="../Docker Engine/centos安装docker.html">
             
-                <a href="../docker安装/centos安装docker.html">
+                <a href="../Docker Engine/centos安装docker.html">
             
                     
                     1.1 centos安装docker
@@ -145,9 +147,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="../docker安装/ubuntu安装docker.html">
+        <li class="chapter " data-level="1.2.2" data-path="../Docker Engine/ubuntu安装docker.html">
             
-                <a href="../docker安装/ubuntu安装docker.html">
+                <a href="../Docker Engine/ubuntu安装docker.html">
             
                     
                     1.2 ubuntu安装docker
@@ -168,7 +170,7 @@
                 <span>
             
                     
-                    第2章 docker镜像
+                    第二章 Docker Image
             
                 </span>
             
@@ -177,9 +179,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.3.1" data-path="镜像的导出导入.html">
+        <li class="chapter " data-level="1.3.1" data-path="../Docker Image/镜像的导出导入.html">
             
-                <a href="镜像的导出导入.html">
+                <a href="../Docker Image/镜像的导出导入.html">
             
                     
                     2.1 镜像的导出导入
@@ -200,7 +202,7 @@
                 <span>
             
                     
-                    第3章 docker容器
+                    第三章 Docker Container
             
                 </span>
             
@@ -209,9 +211,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../docker容器/部署centos容器.html">
+        <li class="chapter " data-level="1.4.1" data-path="部署centos容器.html">
             
-                <a href="../docker容器/部署centos容器.html">
+                <a href="部署centos容器.html">
             
                     
                     3.1 部署centos容器
@@ -222,9 +224,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../docker容器/容器的导出导入.html">
+        <li class="chapter " data-level="1.4.2" data-path="容器的导出导入.html">
             
-                <a href="../docker容器/容器的导出导入.html">
+                <a href="容器的导出导入.html">
             
                     
                     3.2 容器的导出导入
@@ -235,9 +237,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../docker容器/容器的提交.html">
+        <li class="chapter active" data-level="1.4.3" data-path="容器的提交.html">
             
-                <a href="../docker容器/容器的提交.html">
+                <a href="容器的提交.html">
             
                     
                     3.3 容器的提交
@@ -250,6 +252,97 @@
     
 
             </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    第四章 Docker Volume
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    第五章 Docker Network
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    第六章 Dockerfile
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    第七章 Docker Compose
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    第八章 Docker Registry
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    第九章 Docker Software
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    第十章 Docker Manager
+            
+                </span>
+            
+
             
         </li>
     
@@ -283,7 +376,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >2.1 镜像的导出导入</a>
+        <a href=".." >3.3 容器的提交</a>
     </h1>
 </div>
 
@@ -298,42 +391,24 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h6 id="&#x5BFC;&#x51FA;&#x955C;&#x50CF;">&#x5BFC;&#x51FA;&#x955C;&#x50CF;</h6>
-<pre><code class="lang-java">docker save -o my-zookeeper.tar zookeeper:<span class="hljs-number">3.8</span>.1
-</code></pre>
+                                <h6 id="&#x5E94;&#x7528;&#x573A;&#x666F;">&#x5E94;&#x7528;&#x573A;&#x666F;</h6>
 <blockquote>
-<p>&#x67E5;&#x770B;&#x547D;&#x4EE4;&#x5E2E;&#x52A9;</p>
-<p>docker save --help</p>
-<ul>
-<li><p>-o &#x6216;&#x8005; --output &#xFF1A;&#x6307;&#x5B9A;&#x751F;&#x6210;&#x7684;&#x6587;&#x4EF6;</p>
-</li>
-<li><p>&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x7684;&#x8BED;&#x6CD5;&#xFF1A;</p>
-<pre><code class="lang-java">docker save zookeeper:<span class="hljs-number">3.8</span>.1 &gt; my-zookeeper.tar
-</code></pre>
-<p>&#x751F;&#x6210;&#x7684;tar&#x6587;&#x4EF6;&#x5728;&#x5F53;&#x524D;&#x76EE;&#x5F55;</p>
-</li>
-</ul>
+<p>&#x6BD4;&#x5982;&#xFF1A;&#x6211;&#x7528;docker&#x8DD1;&#x4E86;&#x53F0;centos&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x7531;&#x4E8E;centos&#x955C;&#x50CF;&#x4E2D;&#x7F3A;&#x5931;&#x5F88;&#x591A;&#x547D;&#x4EE4;&#x5DE5;&#x5177;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;&#x7EAF;&#x51C0;&#x7248;&#xFF0C;</p>
+<p>&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x5BB9;&#x5668;&#x5185;&#x5B89;&#x88C5;&#x597D;&#x8F6F;&#x4EF6;&#x5DE5;&#x5177;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x6B64;&#x5BB9;&#x5668;&#x8FDB;&#x884C;&#x63D0;&#x4EA4;&#xFF08;commit&#xFF09;&#x6210;&#x65B0;&#x7684;&#x955C;&#x50CF;&#xFF0C;</p>
+<p>&#x5171;&#x4EAB;&#x7ED9;&#x5176;&#x4ED6;&#x4EBA;&#x7528;&#xFF1B;</p>
 </blockquote>
-<h6 id="&#x5BFC;&#x5165;&#x955C;&#x50CF;">&#x5BFC;&#x5165;&#x955C;&#x50CF;</h6>
-<ul>
-<li>&#x5C06;tar&#x6587;&#x4EF6;&#x62F7;&#x8D1D;&#x5230;&#x53E6;&#x5916;&#x53F0;&#x4E3B;&#x673A;&#xFF0C;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x5BFC;&#x5165;</li>
-</ul>
-<pre><code class="lang-java">docker load -i my-zookeeper.tar
+<h6 id="&#x5BB9;&#x5668;&#x7684;&#x63D0;&#x4EA4;">&#x5BB9;&#x5668;&#x7684;&#x63D0;&#x4EA4;</h6>
+<pre><code class="lang-java">docker commit -a <span class="hljs-string">&quot;zhangsan&quot;</span> -m <span class="hljs-string">&quot;installed lrzsz&quot;</span> centos_container mycentos:v1
 </code></pre>
 <blockquote>
+<p>&#x67E5;&#x770B;&#x955C;&#x50CF;&#x8BE6;&#x60C5;&#xFF1A;docker inspect imagesID </p>
 <p>&#x67E5;&#x770B;&#x547D;&#x4EE4;&#x5E2E;&#x52A9;</p>
-<p>docker load --help</p>
+<p>docker commit --help</p>
 <ul>
-<li><p>-i &#x6216;&#x8005; ---input&#xFF1A;&#x6307;&#x5B9A;&#x52A0;&#x8F7D;&#x7684;&#x6587;&#x4EF6;</p>
-</li>
-<li><p>-q &#x6216;&#x8005; --quiet&#xFF1A;&#x7701;&#x7565;&#x6253;&#x5370;&#x7684;&#x4FE1;&#x606F;</p>
-</li>
-<li><p>&#x6807;&#x51C6;&#x8F93;&#x5165;&#x8BED;&#x6CD5;&#xFF1A;</p>
-<pre><code class="lang-java">docker load &lt; my-zookeeper.tar
-</code></pre>
-</li>
-<li><p>options&#x53C2;&#x6570;&#xFF1A;&#x53EA;&#x80FD;&#x5199;&#x6210;-qi&#xFF0C;&#x4E0D;&#x80FD;&#x5199;&#x6210;-iq&#xFF0C;i&#x540E;&#x9762;&#x8981;&#x7D27;&#x8DDF;&#x7740;&#x8981;&#x52A0;&#x8F7D;&#x7684;&#x6587;&#x4EF6;</p>
-</li>
+<li>-a &#x6216;&#x8005; --author&#xFF1A;&#x4F5C;&#x8005;</li>
+<li>-c &#x6216;&#x8005; --change&#xFF1A;Dockerfile CMD</li>
+<li>-m &#x6216;&#x8005; --message&#xFF1A;commit message</li>
+<li>-p &#x6216;&#x8005; --pause&#xFF1A;pause container</li>
 </ul>
 </blockquote>
 
@@ -363,6 +438,10 @@
 
             
                 
+                <a href="容器的导出导入.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 3.2 容器的导出导入">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
                 
             
         
@@ -371,7 +450,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"2.1 镜像的导出导入","level":"1.3.1","depth":2,"next":{"title":"第3章 docker容器","level":"1.4","depth":1,"ref":"","articles":[{"title":"3.1 部署centos容器","level":"1.4.1","depth":2,"path":"docker容器/部署centos容器.md","ref":"docker容器/部署centos容器.md","articles":[]},{"title":"3.2 容器的导出导入","level":"1.4.2","depth":2,"path":"docker容器/容器的导出导入.md","ref":"docker容器/容器的导出导入.md","articles":[]},{"title":"3.3 容器的提交","level":"1.4.3","depth":2,"path":"docker容器/容器的提交.md","ref":"docker容器/容器的提交.md","articles":[]}]},"previous":{"title":"第2章 docker镜像","level":"1.3","depth":1,"ref":"","articles":[{"title":"2.1 镜像的导出导入","level":"1.3.1","depth":2,"path":"docker镜像/镜像的导出导入.md","ref":"docker镜像/镜像的导出导入.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","expandable-chapters","back-to-top-button","custom-favicon","flexible-alerts","insert-logo","donate"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"donate":{"alipay":"https://minio.lyqzhpt.com/typora/404037738204800.png","alipayText":"支付宝","button":"欢迎捐赠","title":"","wechat":"https://minio.lyqzhpt.com/typora/404037738204800.png","wechatText":"微信"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"https://minio.lyqzhpt.com/typora/docker.ico","back-to-top-button":{},"custom-favicon":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 32px; min-height: 32px","url":"https://minio.lyqzhpt.com/typora/docker.png"},"expandable-chapters":{}},"theme":"default","author":"杨文成 <cheng2guen@163.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Docker从入门到放弃》","language":"zh-hans","gitbook":"*","description":"详细地介绍了docker基础知识"},"file":{"path":"docker镜像/镜像的导出导入.md","mtime":"2023-04-26T04:59:08.603Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-04-27T04:43:20.259Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3.3 容器的提交","level":"1.4.3","depth":2,"next":{"title":"第四章 Docker Volume","level":"1.5","depth":1,"ref":"","articles":[]},"previous":{"title":"3.2 容器的导出导入","level":"1.4.2","depth":2,"path":"Docker Container/容器的导出导入.md","ref":"Docker Container/容器的导出导入.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","expandable-chapters","back-to-top-button","custom-favicon","flexible-alerts","insert-logo","donate"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"donate":{"alipay":"https://minio.lyqzhpt.com/typora/404037738204800.png","alipayText":"支付宝","button":"欢迎捐赠","title":"","wechat":"https://minio.lyqzhpt.com/typora/404037738204800.png","wechatText":"微信"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"https://minio.lyqzhpt.com/typora/docker.ico","back-to-top-button":{},"custom-favicon":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 32px; min-height: 32px","url":"https://minio.lyqzhpt.com/typora/docker.png"},"expandable-chapters":{}},"theme":"default","author":"杨文成 <cheng2guen@163.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Docker从入门到放弃》","language":"zh-hans","gitbook":"*","description":"详细地介绍了docker基础知识"},"file":{"path":"Docker Container/容器的提交.md","mtime":"2023-04-15T12:22:29.190Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-04-27T08:32:05.243Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

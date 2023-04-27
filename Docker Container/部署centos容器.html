@@ -125,7 +125,7 @@
                 <span>
             
                     
-                    第1章 docker安装
+                    第一章 Docker Engine
             
                 </span>
             
@@ -134,9 +134,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../docker安装/centos安装docker.html">
+        <li class="chapter " data-level="1.2.1" data-path="../Docker Engine/centos安装docker.html">
             
-                <a href="../docker安装/centos安装docker.html">
+                <a href="../Docker Engine/centos安装docker.html">
             
                     
                     1.1 centos安装docker
@@ -147,9 +147,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="../docker安装/ubuntu安装docker.html">
+        <li class="chapter " data-level="1.2.2" data-path="../Docker Engine/ubuntu安装docker.html">
             
-                <a href="../docker安装/ubuntu安装docker.html">
+                <a href="../Docker Engine/ubuntu安装docker.html">
             
                     
                     1.2 ubuntu安装docker
@@ -170,7 +170,7 @@
                 <span>
             
                     
-                    第2章 docker镜像
+                    第二章 Docker Image
             
                 </span>
             
@@ -179,9 +179,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="../docker镜像/镜像的导出导入.html">
+        <li class="chapter " data-level="1.3.1" data-path="../Docker Image/镜像的导出导入.html">
             
-                <a href="../docker镜像/镜像的导出导入.html">
+                <a href="../Docker Image/镜像的导出导入.html">
             
                     
                     2.1 镜像的导出导入
@@ -202,7 +202,7 @@
                 <span>
             
                     
-                    第3章 docker容器
+                    第三章 Docker Container
             
                 </span>
             
@@ -255,6 +255,97 @@
             
         </li>
     
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    第四章 Docker Volume
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    第五章 Docker Network
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    第六章 Dockerfile
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    第七章 Docker Compose
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    第八章 Docker Registry
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    第九章 Docker Software
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    第十章 Docker Manager
+            
+                </span>
+            
+
+            
+        </li>
+    
 
     
 
@@ -304,7 +395,7 @@
 <pre><code class="lang-shell">docker pull centos:7
 </code></pre>
 <h6 id="&#x8FD0;&#x884C;&#x5BB9;&#x5668;">&#x8FD0;&#x884C;&#x5BB9;&#x5668;</h6>
-<pre><code class="lang-shell">docker -it --name centos7 centos:7
+<pre><code class="lang-shell">docker run -it --name centos7 centos:7
 </code></pre>
 <blockquote>
 <p>[!COMMENT]</p>
@@ -384,7 +475,7 @@ docker push xxx.xxx.xx/xxx/mycentos:1.0.0
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3.1 部署centos容器","level":"1.4.1","depth":2,"next":{"title":"3.2 容器的导出导入","level":"1.4.2","depth":2,"path":"docker容器/容器的导出导入.md","ref":"docker容器/容器的导出导入.md","articles":[]},"previous":{"title":"第3章 docker容器","level":"1.4","depth":1,"ref":"","articles":[{"title":"3.1 部署centos容器","level":"1.4.1","depth":2,"path":"docker容器/部署centos容器.md","ref":"docker容器/部署centos容器.md","articles":[]},{"title":"3.2 容器的导出导入","level":"1.4.2","depth":2,"path":"docker容器/容器的导出导入.md","ref":"docker容器/容器的导出导入.md","articles":[]},{"title":"3.3 容器的提交","level":"1.4.3","depth":2,"path":"docker容器/容器的提交.md","ref":"docker容器/容器的提交.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","expandable-chapters","back-to-top-button","custom-favicon","flexible-alerts","insert-logo","donate"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"donate":{"alipay":"https://minio.lyqzhpt.com/typora/404037738204800.png","alipayText":"支付宝","button":"欢迎捐赠","title":"","wechat":"https://minio.lyqzhpt.com/typora/404037738204800.png","wechatText":"微信"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"https://minio.lyqzhpt.com/typora/docker.ico","back-to-top-button":{},"custom-favicon":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 32px; min-height: 32px","url":"https://minio.lyqzhpt.com/typora/docker.png"},"expandable-chapters":{}},"theme":"default","author":"杨文成 <cheng2guen@163.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Docker从入门到放弃》","language":"zh-hans","gitbook":"*","description":"详细地介绍了docker基础知识"},"file":{"path":"docker容器/部署centos容器.md","mtime":"2023-04-27T03:52:33.254Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-04-27T04:43:20.259Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3.1 部署centos容器","level":"1.4.1","depth":2,"next":{"title":"3.2 容器的导出导入","level":"1.4.2","depth":2,"path":"Docker Container/容器的导出导入.md","ref":"Docker Container/容器的导出导入.md","articles":[]},"previous":{"title":"第三章 Docker Container","level":"1.4","depth":1,"ref":"","articles":[{"title":"3.1 部署centos容器","level":"1.4.1","depth":2,"path":"Docker Container/部署centos容器.md","ref":"Docker Container/部署centos容器.md","articles":[]},{"title":"3.2 容器的导出导入","level":"1.4.2","depth":2,"path":"Docker Container/容器的导出导入.md","ref":"Docker Container/容器的导出导入.md","articles":[]},{"title":"3.3 容器的提交","level":"1.4.3","depth":2,"path":"Docker Container/容器的提交.md","ref":"Docker Container/容器的提交.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","expandable-chapters","back-to-top-button","custom-favicon","flexible-alerts","insert-logo","donate"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"donate":{"alipay":"https://minio.lyqzhpt.com/typora/404037738204800.png","alipayText":"支付宝","button":"欢迎捐赠","title":"","wechat":"https://minio.lyqzhpt.com/typora/404037738204800.png","wechatText":"微信"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"https://minio.lyqzhpt.com/typora/docker.ico","back-to-top-button":{},"custom-favicon":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 32px; min-height: 32px","url":"https://minio.lyqzhpt.com/typora/docker.png"},"expandable-chapters":{}},"theme":"default","author":"杨文成 <cheng2guen@163.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Docker从入门到放弃》","language":"zh-hans","gitbook":"*","description":"详细地介绍了docker基础知识"},"file":{"path":"Docker Container/部署centos容器.md","mtime":"2023-04-27T06:58:58.812Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-04-27T08:32:05.243Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

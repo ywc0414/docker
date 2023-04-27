@@ -7,7 +7,7 @@ docker pull centos:7
 ###### 运行容器
 
 ```shell
-docker -it --name centos7 centos:7
+docker run -it --name centos7 centos:7
 ```
 
 > [!COMMENT]
