@@ -65,10 +65,45 @@ docker的默认存储路径：/var/lib/docker
 
 创建daemon.json：vim /etc/docker/daemon.json
 
-```java
+```json
 { 
-    "registry-mirrors": ["https://23evy2ba.mirror.aliyuncs.com"], # 阿里云的镜像加速地址
-    "data-root": "/home/docker" # 设置docker的默认存储路径     
+    # 设置私有仓库地址（http）
+    "insecure-registries": ["192.168.1.238:5000"], 
+    
+    # 阿里云的镜像加速地址
+    "registry-mirrors": ["https://23evy2ba.mirror.aliyuncs.com"], 
+    
+    # 设置docker的默认存储路径 
+    "data-root": "/home/docker",
+    
+    # Docker远程管理，可以结合portainer WEB管理工具一起使用
+    "hosts": ["tcp://0.0.0.0:2375", "unix:///var/run/docker.sock"],
+    
+    # 官方推荐使用systemd，非常不建议使用cgroupfs
+    "exec-opts": ["native.cgroupdriver=systemd"], 
+    
+    # 设置为阿里的dns（默认为谷歌的：8.8.8.8和8.8.4.4）
+    "dns": ["223.5.5.5", "223.6.6.6"],
+    
+    # 设置docker日志文件
+    "log-driver": "json-file",
+    "log-opts": {
+        "max-size": "100m",
+        "max-file": "10"
+     },
+     
+     # Docker推荐使用overlay2作为Storage driver
+     "storage-driver": "overlay2",
+     "storage-opts":["overlay2.override_kernel_check=true"],
+     
+     # 设置/dev/shm的大小，默认值是64M
+     "default-shm-size": "128M", 
+     
+     # pull镜像的最大并行数，默认为3个
+     "max-concurrent-downloads": 10, 
+     
+     # push镜像的最大并行数，默认为5个
+     "max-concurrent-uploads": 10   
 }
 ```
 

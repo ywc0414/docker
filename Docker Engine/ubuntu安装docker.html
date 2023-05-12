@@ -430,9 +430,44 @@ software-properties-common
 <h6 id="&#x914D;&#x7F6E;&#x955C;&#x50CF;&#x52A0;&#x901F;&#x53CA;&#x4FEE;&#x6539;&#x9ED8;&#x8BA4;&#x5B58;&#x50A8;&#x8DEF;&#x5F84;">&#x914D;&#x7F6E;&#x955C;&#x50CF;&#x52A0;&#x901F;&#x53CA;&#x4FEE;&#x6539;&#x9ED8;&#x8BA4;&#x5B58;&#x50A8;&#x8DEF;&#x5F84;</h6>
 <p>docker&#x7684;&#x9ED8;&#x8BA4;&#x5B58;&#x50A8;&#x8DEF;&#x5F84;&#xFF1A;/var/lib/docker</p>
 <p>&#x521B;&#x5EFA;daemon.json&#xFF1A;vim /etc/docker/daemon.json</p>
-<pre><code class="lang-java">{ 
-    &quot;registry-mirrors&quot;: [&quot;https://23evy2ba.mirror.aliyuncs.com&quot;], # &#x963F;&#x91CC;&#x4E91;&#x7684;&#x955C;&#x50CF;&#x52A0;&#x901F;&#x5730;&#x5740;
-    &quot;data-root&quot;: &quot;/home/docker&quot; # &#x8BBE;&#x7F6E;docker&#x7684;&#x9ED8;&#x8BA4;&#x5B58;&#x50A8;&#x8DEF;&#x5F84;     
+<pre><code class="lang-json">{ 
+    # &#x8BBE;&#x7F6E;&#x79C1;&#x6709;&#x4ED3;&#x5E93;&#x5730;&#x5740;&#xFF08;http&#xFF09;
+    &quot;insecure-registries&quot;: [&quot;192.168.1.238:5000&quot;], 
+
+    # &#x963F;&#x91CC;&#x4E91;&#x7684;&#x955C;&#x50CF;&#x52A0;&#x901F;&#x5730;&#x5740;
+    &quot;registry-mirrors&quot;: [&quot;https://23evy2ba.mirror.aliyuncs.com&quot;], 
+
+    # &#x8BBE;&#x7F6E;docker&#x7684;&#x9ED8;&#x8BA4;&#x5B58;&#x50A8;&#x8DEF;&#x5F84; 
+    &quot;data-root&quot;: &quot;/home/docker&quot;,
+
+    # Docker&#x8FDC;&#x7A0B;&#x7BA1;&#x7406;&#xFF0C;&#x53EF;&#x4EE5;&#x7ED3;&#x5408;portainer WEB&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#x4E00;&#x8D77;&#x4F7F;&#x7528;
+    &quot;hosts&quot;: [&quot;tcp://0.0.0.0:2375&quot;, &quot;unix:///var/run/docker.sock&quot;],
+
+    # &#x5B98;&#x65B9;&#x63A8;&#x8350;&#x4F7F;&#x7528;systemd&#xFF0C;&#x975E;&#x5E38;&#x4E0D;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;cgroupfs
+    &quot;exec-opts&quot;: [&quot;native.cgroupdriver=systemd&quot;], 
+
+    # &#x8BBE;&#x7F6E;&#x4E3A;&#x963F;&#x91CC;&#x7684;dns&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;&#x8C37;&#x6B4C;&#x7684;&#xFF1A;8.8.8.8&#x548C;8.8.4.4&#xFF09;
+    &quot;dns&quot;: [&quot;223.5.5.5&quot;, &quot;223.6.6.6&quot;],
+
+    # &#x8BBE;&#x7F6E;docker&#x65E5;&#x5FD7;&#x6587;&#x4EF6;
+    &quot;log-driver&quot;: &quot;json-file&quot;,
+    &quot;log-opts&quot;: {
+        &quot;max-size&quot;: &quot;100m&quot;,
+        &quot;max-file&quot;: &quot;10&quot;
+     },
+
+     # Docker&#x63A8;&#x8350;&#x4F7F;&#x7528;overlay2&#x4F5C;&#x4E3A;Storage driver
+     &quot;storage-driver&quot;: &quot;overlay2&quot;,
+     &quot;storage-opts&quot;:[&quot;overlay2.override_kernel_check=true&quot;],
+
+     # &#x8BBE;&#x7F6E;/dev/shm&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x662F;64M
+     &quot;default-shm-size&quot;: &quot;128M&quot;, 
+
+     # pull&#x955C;&#x50CF;&#x7684;&#x6700;&#x5927;&#x5E76;&#x884C;&#x6570;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;3&#x4E2A;
+     &quot;max-concurrent-downloads&quot;: 10, 
+
+     # push&#x955C;&#x50CF;&#x7684;&#x6700;&#x5927;&#x5E76;&#x884C;&#x6570;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;5&#x4E2A;
+     &quot;max-concurrent-uploads&quot;: 10   
 }
 </code></pre>
 <blockquote>
@@ -491,7 +526,7 @@ software-properties-common
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1.2 ubuntu安装docker","level":"1.2.2","depth":2,"next":{"title":"第二章 Docker Image","level":"1.3","depth":1,"ref":"","articles":[{"title":"2.1 镜像的导出导入","level":"1.3.1","depth":2,"path":"Docker Image/镜像的导出导入.md","ref":"Docker Image/镜像的导出导入.md","articles":[]}]},"previous":{"title":"1.1 centos安装docker","level":"1.2.1","depth":2,"path":"Docker Engine/centos安装docker.md","ref":"Docker Engine/centos安装docker.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","expandable-chapters","back-to-top-button","custom-favicon","flexible-alerts","insert-logo","donate"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"donate":{"alipay":"https://minio.lyqzhpt.com/typora/alipay.jpg","alipayText":"支付宝","button":"欢迎捐赠","title":"","wechat":"https://minio.lyqzhpt.com/typora/wechatpay.jpg","wechatText":"微信"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"https://minio.lyqzhpt.com/typora/docker.ico","back-to-top-button":{},"custom-favicon":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 32px; min-height: 32px","url":"https://minio.lyqzhpt.com/typora/docker.png"},"expandable-chapters":{}},"theme":"default","author":"杨文成 <cheng2guen@163.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Docker从入门到放弃》","language":"zh-hans","gitbook":"*","description":"详细地介绍了docker基础知识"},"file":{"path":"Docker Engine/ubuntu安装docker.md","mtime":"2023-04-26T06:36:22.087Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-04-27T12:38:46.552Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"1.2 ubuntu安装docker","level":"1.2.2","depth":2,"next":{"title":"第二章 Docker Image","level":"1.3","depth":1,"ref":"","articles":[{"title":"2.1 镜像的导出导入","level":"1.3.1","depth":2,"path":"Docker Image/镜像的导出导入.md","ref":"Docker Image/镜像的导出导入.md","articles":[]}]},"previous":{"title":"1.1 centos安装docker","level":"1.2.1","depth":2,"path":"Docker Engine/centos安装docker.md","ref":"Docker Engine/centos安装docker.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","expandable-chapters","back-to-top-button","custom-favicon","flexible-alerts","insert-logo","donate"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"donate":{"alipay":"https://minio.lyqzhpt.com/typora/alipay.jpg","alipayText":"支付宝","button":"欢迎赞赏","title":"","wechat":"https://minio.lyqzhpt.com/typora/wechatpay.jpg","wechatText":"微信"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"ico/docker.ico","back-to-top-button":{},"custom-favicon":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false,"showFooter":false},"insert-logo":{"style":"background: none; max-height: 32px; min-height: 32px","url":"https://minio.lyqzhpt.com/typora/docker.png"},"expandable-chapters":{}},"theme":"default","author":"杨文成 <cheng2guen@163.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Docker从入门到放弃》","language":"zh-hans","gitbook":"*","description":"详细地介绍了docker基础知识"},"file":{"path":"Docker Engine/ubuntu安装docker.md","mtime":"2023-05-10T01:25:49.305Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-05-12T08:49:40.240Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

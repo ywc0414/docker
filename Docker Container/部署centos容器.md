@@ -18,9 +18,7 @@ docker run -it --name centos7 centos:7
 > - --name：容器名称
 > - centos:7：镜像名称
 
-
-
-###### 进入容器
+###### 入容器
 
 ```shell
 # 进入容器
@@ -42,6 +40,7 @@ docker commit -a "yangwencheng" -c "installed lrzsz" centos7 mycentos:1.0.0
 
 > [!COMMENT]
 > docker commit --help
+>
 > - -a：作者
 > - -m：描述
 
