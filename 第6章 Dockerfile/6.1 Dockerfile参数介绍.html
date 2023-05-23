@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>3.3 容器的提交 · 《Docker从入门到放弃》</title>
+        <title>6.1 Dockerfile参数介绍 · 《Docker从入门到放弃》</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -78,10 +78,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="3.4 容器的导出导入.html" />
+    <link rel="next" href="6.2 构建centos镜像.html" />
     
-    
-    <link rel="prev" href="3.2 部署centos容器.html" />
     
 
     
@@ -242,9 +240,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="3.1 容器的基础命令.html">
+        <li class="chapter " data-level="1.4.1" data-path="../第3章 Docker Container/3.1 容器的基础命令.html">
             
-                <a href="3.1 容器的基础命令.html">
+                <a href="../第3章 Docker Container/3.1 容器的基础命令.html">
             
                     
                     3.1 容器的基础命令
@@ -255,9 +253,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="3.2 部署centos容器.html">
+        <li class="chapter " data-level="1.4.2" data-path="../第3章 Docker Container/3.2 部署centos容器.html">
             
-                <a href="3.2 部署centos容器.html">
+                <a href="../第3章 Docker Container/3.2 部署centos容器.html">
             
                     
                     3.2 部署centos容器
@@ -268,9 +266,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.3" data-path="3.3 容器的提交.html">
+        <li class="chapter " data-level="1.4.3" data-path="../第3章 Docker Container/3.3 容器的提交.html">
             
-                <a href="3.3 容器的提交.html">
+                <a href="../第3章 Docker Container/3.3 容器的提交.html">
             
                     
                     3.3 容器的提交
@@ -281,9 +279,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="3.4 容器的导出导入.html">
+        <li class="chapter " data-level="1.4.4" data-path="../第3章 Docker Container/3.4 容器的导出导入.html">
             
-                <a href="3.4 容器的导出导入.html">
+                <a href="../第3章 Docker Container/3.4 容器的导出导入.html">
             
                     
                     3.4 容器的导出导入
@@ -416,9 +414,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.1" data-path="../第6章 Dockerfile/6.1 Dockerfile参数介绍.html">
+        <li class="chapter active" data-level="1.7.1" data-path="6.1 Dockerfile参数介绍.html">
             
-                <a href="../第6章 Dockerfile/6.1 Dockerfile参数介绍.html">
+                <a href="6.1 Dockerfile参数介绍.html">
             
                     
                     6.1 Dockerfile参数介绍
@@ -429,9 +427,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2" data-path="../第6章 Dockerfile/6.2 构建centos镜像.html">
+        <li class="chapter " data-level="1.7.2" data-path="6.2 构建centos镜像.html">
             
-                <a href="../第6章 Dockerfile/6.2 构建centos镜像.html">
+                <a href="6.2 构建centos镜像.html">
             
                     
                     6.2 构建centos镜像
@@ -442,9 +440,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.3" data-path="../第6章 Dockerfile/6.3 构建ubuntu镜像.html">
+        <li class="chapter " data-level="1.7.3" data-path="6.3 构建ubuntu镜像.html">
             
-                <a href="../第6章 Dockerfile/6.3 构建ubuntu镜像.html">
+                <a href="6.3 构建ubuntu镜像.html">
             
                     
                     6.3 构建ubuntu镜像
@@ -455,9 +453,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.4" data-path="../第6章 Dockerfile/6.4 构建springboot镜像.html">
+        <li class="chapter " data-level="1.7.4" data-path="6.4 构建springboot镜像.html">
             
-                <a href="../第6章 Dockerfile/6.4 构建springboot镜像.html">
+                <a href="6.4 构建springboot镜像.html">
             
                     
                     6.4 构建springboot镜像
@@ -709,7 +707,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >3.3 容器的提交</a>
+        <a href=".." >6.1 Dockerfile参数介绍</a>
     </h1>
 </div>
 
@@ -724,26 +722,257 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h6 id="&#x5E94;&#x7528;&#x573A;&#x666F;">&#x5E94;&#x7528;&#x573A;&#x666F;</h6>
-<blockquote>
-<p>&#x6BD4;&#x5982;&#xFF1A;&#x6211;&#x7528;docker&#x8DD1;&#x4E86;&#x53F0;centos&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x7531;&#x4E8E;centos&#x955C;&#x50CF;&#x4E2D;&#x7F3A;&#x5931;&#x5F88;&#x591A;&#x547D;&#x4EE4;&#x5DE5;&#x5177;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;&#x7EAF;&#x51C0;&#x7248;&#xFF0C;</p>
-<p>&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x5BB9;&#x5668;&#x5185;&#x5B89;&#x88C5;&#x597D;&#x8F6F;&#x4EF6;&#x5DE5;&#x5177;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x6B64;&#x5BB9;&#x5668;&#x8FDB;&#x884C;&#x63D0;&#x4EA4;&#xFF08;commit&#xFF09;&#x6210;&#x65B0;&#x7684;&#x955C;&#x50CF;&#xFF0C;</p>
-<p>&#x5171;&#x4EAB;&#x7ED9;&#x5176;&#x4ED6;&#x4EBA;&#x7528;&#xFF1B;</p>
-</blockquote>
-<h6 id="&#x5BB9;&#x5668;&#x7684;&#x63D0;&#x4EA4;">&#x5BB9;&#x5668;&#x7684;&#x63D0;&#x4EA4;</h6>
-<pre><code class="lang-bash">docker commit <span class="hljs-_">-a</span> <span class="hljs-string">&quot;zhangsan&quot;</span> -m <span class="hljs-string">&quot;installed lrzsz&quot;</span> centos_container mycentos:v1
+                                <h6 id="&#x6307;&#x4EE4;&#x8BE6;&#x89E3;">&#x6307;&#x4EE4;&#x8BE6;&#x89E3;</h6>
+<ol>
+<li><p><strong>FROM</strong> </p>
+<ul>
+<li><p><strong>&#x63CF;&#x8FF0;</strong></p>
+<p>&#x529F;&#x80FD;&#x4E3A;&#x6307;&#x5B9A;&#x57FA;&#x7840;&#x955C;&#x50CF;&#xFF0C;&#x5E76;&#x4E14;&#x5FC5;&#x987B;&#x662F;&#x7B2C;&#x4E00;&#x6761;&#x6307;&#x4EE4;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x4EE5;&#x4EFB;&#x4F55;&#x955C;&#x50CF;&#x4E3A;&#x57FA;&#x7840;&#xFF0C;&#x90A3;&#x4E48;&#x5199;&#x6CD5;&#x4E3A;&#xFF1A;FROM scratch&#x3002;&#x540C;&#x65F6;&#x610F;&#x5473;&#x7740;&#x63A5;&#x4E0B;&#x6765;&#x6240;&#x5199;&#x7684;&#x6307;&#x4EE4;&#x5C06;&#x4F5C;&#x4E3A;&#x955C;&#x50CF;&#x7684;&#x7B2C;&#x4E00;&#x5C42;&#x5F00;&#x59CB;&#x3002;</p>
+</li>
+<li><p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre><code class="lang-bash">FROM &lt;image&gt;
+FROM &lt;image&gt;:&lt;tag&gt;
+FROM &lt;image&gt;:&lt;digest&gt; 
+<span class="hljs-comment"># &#x4E09;&#x79CD;&#x5199;&#x6CD5;&#xFF0C;&#x5176;&#x4E2D;&lt;tag&gt;&#x548C;&lt;digest&gt; &#x662F;&#x53EF;&#x9009;&#x9879;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x9009;&#x62E9;&#xFF0C;&#x90A3;&#x4E48;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;latest</span>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong>MAINTAINER</strong> </p>
+<ul>
+<li><p><strong>&#x63CF;&#x8FF0;</strong></p>
+<p>&#x6307;&#x5B9A;&#x4F5C;&#x8005;</p>
+</li>
+<li><p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre><code class="lang-bash">MAINTAINER &lt;name&gt;
 </code></pre>
 <blockquote>
-<p>&#x67E5;&#x770B;&#x955C;&#x50CF;&#x8BE6;&#x60C5;&#xFF1A;docker inspect imagesID </p>
-<p>&#x67E5;&#x770B;&#x547D;&#x4EE4;&#x5E2E;&#x52A9;</p>
-<p>docker commit --help</p>
+<p>&#x65B0;&#x7248;&#x672C;docker&#x4F7F;&#x7528;LABEL&#x6307;&#x660E;</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>LABEL</strong></p>
 <ul>
-<li>-a &#x6216;&#x8005; --author&#xFF1A;&#x4F5C;&#x8005;</li>
-<li>-c &#x6216;&#x8005; --change&#xFF1A;Dockerfile CMD</li>
-<li>-m &#x6216;&#x8005; --message&#xFF1A;commit message</li>
-<li>-p &#x6216;&#x8005; --pause&#xFF1A;pause container</li>
+<li><p><strong>&#x63CF;&#x8FF0;</strong></p>
+<p>&#x6307;&#x5B9A;&#x6807;&#x7B7E;</p>
+</li>
+<li><p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre><code class="lang-bash">LABEL &lt;key&gt;=&lt;value&gt; &lt;key&gt;=&lt;value&gt; &lt;key&gt;=&lt;value&gt; ...
+LABEL maintainer=<span class="hljs-string">&quot;xxxx&quot;</span> email=<span class="hljs-string">&quot;xxx@163.com&quot;</span>
+
+<span class="hljs-comment"># &#x5982;&#x679C;&#x592A;&#x957F;&#xFF0C;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x6362;&#x884C;&#x7B26;&quot;\&quot;</span>
+LABEL maintainer=<span class="hljs-string">&quot;xxxx&quot;</span> \
+email=<span class="hljs-string">&quot;xxx@163.com&quot;</span> \
+description=<span class="hljs-string">&quot;xxxxxxx&quot;</span>
+
+<span class="hljs-comment"># &#x4E00;&#x4E2A;Dockerfile&#x79CD;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;LABEL</span>
+LABEL maintainer=<span class="hljs-string">&quot;xxxx&quot;</span>
+LABEL email=<span class="hljs-string">&quot;xxx@163.com&quot;</span>
+LABEL description=<span class="hljs-string">&quot;xxxxxxx&quot;</span>
+</code></pre>
+<blockquote>
+<p>LABEL&#x4F1A;&#x7EE7;&#x627F;&#x57FA;&#x7840;&#x955C;&#x50CF;&#x79CD;&#x7684;LABEL&#xFF0C;&#x5982;&#x9047;&#x5230;key&#x76F8;&#x540C;&#xFF0C;&#x5219;&#x503C;&#x4F1A;&#x88AB;&#x8986;&#x76D6;</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>ADD</strong></p>
+<ul>
+<li><p><strong>&#x63CF;&#x8FF0;</strong></p>
+<p>&#x628A;&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x5230;&#x955C;&#x50CF;&#x4E2D;</p>
+</li>
+<li><p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre><code class="lang-bash">ADD &lt;src&gt;... &lt;dest&gt;
+
+<span class="hljs-comment"># &#x76EE;&#x5F55;&#xFF08;&#x5C06;&#x8BE5;&#x76EE;&#x5F55;&#x4E0B;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x5230;&#x76EE;&#x6807;&#x76EE;&#x5F55;&#x4E0B;&#xFF09;</span>
+ADD /opt/<span class="hljs-built_in">test</span> /opt/<span class="hljs-built_in">test</span>Dir
+
+<span class="hljs-comment"># &#x6587;&#x4EF6;</span>
+ADD test.jar /opt/test.jar
+
+<span class="hljs-comment"># &#x538B;&#x7F29;&#x6587;&#x4EF6;&#xFF08;&#x6DFB;&#x52A0;&#x8FC7;&#x53BB;&#x540E;&#x4F1A;&#x81EA;&#x52A8;&#x89E3;&#x538B;&#xFF09;</span>
+ADD test.tar.gz /opt
+
+<span class="hljs-comment"># url</span>
+ADD http://www.xxx.com/<span class="hljs-built_in">test</span> /opt
+</code></pre>
+<blockquote>
+<ul>
+<li><p>&#x8DEF;&#x5F84;&#x7684;&#x586B;&#x5199;&#x53EF;&#x4EE5;&#x662F;&#x5BB9;&#x5668;&#x5185;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x76F8;&#x5BF9;&#x4E8E;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x7684;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#xFF0C;&#x63A8;&#x8350;&#x5199;&#x6210;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</p>
+</li>
+<li><p>&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x6216;&#x8005;&#x662F;&#x4E00;&#x4E2A;&#x672C;&#x5730;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;url</p>
+</li>
+<li><p>&#x5982;&#x679C;&#x628A;&#x5199;&#x6210;&#x4E00;&#x4E2A;url&#xFF0C;&#x90A3;&#x4E48;ADD&#x5C31;&#x7C7B;&#x4F3C;&#x4E8E;wget&#x547D;&#x4EE4;</p>
+</li>
+<li><p>src&#x4E3A;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x628A;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x590D;&#x5236;&#x8FC7;&#x53BB;&#xFF0C;&#x76EE;&#x5F55;&#x672C;&#x8EAB;&#x4E0D;&#x4F1A;&#x590D;&#x5236;</p>
+</li>
+<li><p>&#x5982;&#x679C;src&#x4E3A;&#x591A;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;dest&#x4E00;&#x5B9A;&#x8981;&#x662F;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;</p>
+</li>
 </ul>
 </blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>COPY</strong></p>
+<ul>
+<li><p><strong>&#x63CF;&#x8FF0;</strong></p>
+<p>&#x628A;&#x6587;&#x4EF6;&#x590D;&#x5236;&#x5230;&#x955C;&#x50CF;&#x4E2D;</p>
+</li>
+<li><p><strong>&#x8BED;&#x6CD5;</strong></p>
+<p>&#x529F;&#x80FD;&#x4E0E;ADD&#x7C7B;&#x4F3C;</p>
+<blockquote>
+<p>&#x533A;&#x522B;&#xFF1A;</p>
+<ul>
+<li><p>COPY&#x7684;&#x53EA;&#x80FD;&#x662F;&#x672C;&#x5730;&#x6587;&#x4EF6;</p>
+</li>
+<li><p>COPY&#x5982;&#x679C;&#x662F;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#xFF0C;&#x4E0D;&#x4F1A;&#x81EA;&#x52A8;&#x89E3;&#x538B;</p>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>EXPOSE</strong></p>
+<ul>
+<li><p><strong>&#x63CF;&#x8FF0;</strong></p>
+<p>&#x66B4;&#x6F0F;&#x5BB9;&#x5668;&#x8FD0;&#x884C;&#x65F6;&#x7684;&#x76D1;&#x542C;&#x7AEF;&#x53E3;&#x7ED9;&#x5916;&#x90E8;</p>
+</li>
+<li><p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre><code class="lang-bash">EXPOSE &lt;port&gt;
+EXPOSE 8080
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong>EVN</strong></p>
+<ul>
+<li><p><strong>&#x63CF;&#x8FF0;</strong></p>
+<p>&#x8BBE;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;</p>
+</li>
+<li><p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x5355;&#x4E2A;</span>
+ENV &lt;key&gt; &lt;value&gt;
+
+<span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x591A;&#x4E2A;</span>
+ENV &lt;key&gt;=&lt;value&gt; ...
+
+ENV MYSQL_ROOT_PASSWORD=<span class="hljs-string">&quot;123456&quot;</span> MYSQL_ROOT_HOST=<span class="hljs-string">&quot;localhost&quot;</span>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong>RUN</strong></p>
+<ul>
+<li><p>&#x63CF;&#x8FF0;</p>
+<p>&#x6784;&#x5EFA;&#x955C;&#x50CF;&#x65F6;&#x6267;&#x884C;&#x7684;&#x547D;&#x4EE4;</p>
+</li>
+<li><p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x76F4;&#x63A5;&#x8FD0;&#x884C;shell&#x547D;&#x4EE4;</span>
+RUN &lt;<span class="hljs-built_in">command</span>&gt;
+RUN yum install -y net-tools lrzsz unzip
+
+<span class="hljs-comment"># &#x7C7B;&#x4F3C;&#x4E8E;&#x51FD;&#x6570;&#x8C03;&#x7528;&#xFF08;&#x53EF;&#x5C06;exec&#x7406;&#x89E3;&#x6210;&#x4E3A;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#xFF0C;&#x540E;&#x9762;&#x5C31;&#x662F;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF09;</span>
+RUN [<span class="hljs-string">&quot;executable&quot;</span>, <span class="hljs-string">&quot;param1&quot;</span>, <span class="hljs-string">&quot;param2&quot;</span>]
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong>CMD</strong></p>
+<ul>
+<li><p><strong>&#x63CF;&#x8FF0;</strong></p>
+<p>&#x5BB9;&#x5668;&#x542F;&#x52A8;&#x65F6;&#x9ED8;&#x8BA4;&#x547D;&#x4EE4;&#x6216;&#x53C2;&#x6570;</p>
+</li>
+<li><p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre><code class="lang-bash">CMD [<span class="hljs-string">&quot;executable&quot;</span>,<span class="hljs-string">&quot;param1&quot;</span>,<span class="hljs-string">&quot;param2&quot;</span>]
+CMD [ <span class="hljs-string">&quot;sh&quot;</span>, <span class="hljs-string">&quot;-c&quot;</span>, <span class="hljs-string">&quot;echo <span class="hljs-variable">$HOME</span>&quot;</span> 
+
+CMD [<span class="hljs-string">&quot;param1&quot;</span>,<span class="hljs-string">&quot;param2&quot;</span>]
+CMD [ <span class="hljs-string">&quot;echo&quot;</span>, <span class="hljs-string">&quot;<span class="hljs-variable">$HOME</span>&quot;</span> ]
+
+CMD <span class="hljs-built_in">command</span> param1 param2
+CMD date
+</code></pre>
+<blockquote>
+<p>RUN&#x548C;CMD&#x7684;&#x5374;&#x522B;</p>
+<ul>
+<li><p>RUN&#xFF1A;&#x6784;&#x5EFA;&#x955C;&#x50CF;&#x65F6;&#x6267;&#x884C;&#x7684;&#x547D;&#x4EE4;</p>
+</li>
+<li><p>CMD&#xFF1A;&#x6784;&#x5EFA;&#x65F6;&#x6307;&#x5B9A;&#xFF0C;&#x5BB9;&#x5668;&#x8FD0;&#x884C;&#x65F6;&#x6267;&#x884C;&#x7684;&#x547D;&#x4EE4;</p>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>ENTRYPOINT</strong></p>
+<ul>
+<li><p><strong>&#x63CF;&#x8FF0;</strong></p>
+<p>&#x5BB9;&#x5668;&#x542F;&#x52A8;&#x65F6;&#x8FD0;&#x884C;&#x5F97;&#x542F;&#x52A8;&#x547D;&#x4EE4;</p>
+</li>
+<li><p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre><code class="lang-bsh"># &#x6267;&#x884C;shell&#x547D;&#x4EE4;
+ENTRYPOINT command param1 param2
+
+# &#x6267;&#x884C;&#x5E26;&#x53C2;&#x6570;&#x7684;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;
+ENTRYPOINT [&quot;executable&quot;, &quot;param1&quot;, &quot;param2&quot;]
+</code></pre>
+<blockquote>
+<p>ENTRYPOINT&#x548C;CMD&#x7684;&#x533A;&#x522B;</p>
+<ul>
+<li><p>CMD&#x53EA;&#x80FD;&#x5199;&#x4E00;&#x6761;&#xFF0C;&#x5982;&#x679C;&#x5199;&#x4E86;&#x591A;&#x6761;&#xFF0C;&#x4F1A;&#x88AB;&#x8986;&#x76D6;</p>
+</li>
+<li><p>ENTRYPOINT&#x4E0D;&#x4F1A;&#x88AB;&#x8986;&#x76D6;</p>
+</li>
+<li><p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x5728;Dockerfile&#x79CD;&#x540C;&#x65F6;&#x5199;&#x4E86;ENTRYPOINT&#x548C;CMD&#xFF0C;&#x5E76;&#x4E14;CMD&#x6307;&#x4EE4;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x53EF;&#x6267;&#x884C;&#x547D;&#x4EE4;&#xFF0C;&#x90A3;&#x4E48;CMD&#x6307;&#x5B9A;&#x7684;&#x5185;&#x5BB9;&#x5C06;&#x4F1A;&#x4F5C;&#x4E3A;ENTRYPOINT&#x7684;&#x53C2;&#x6570;</p>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>VOLUME</strong></p>
+<ul>
+<li><p><strong>&#x63CF;&#x8FF0;</strong></p>
+<p>&#x6307;&#x5B9A;&#x6302;&#x8F7D;&#x5377;</p>
+</li>
+<li><p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre><code class="lang-bash">VOLUME /var/<span class="hljs-built_in">log</span> /var/db
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong>USER</strong></p>
+<ul>
+<li><p><strong>&#x63CF;&#x8FF0;</strong></p>
+<p>&#x6307;&#x5B9A;&#x542F;&#x52A8;&#x5BB9;&#x5668;&#x7684;&#x7528;&#x6237;</p>
+</li>
+<li><p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x6307;&#x5B9A;&#x7528;&#x6237;&#x540D;&#x79F0;</span>
+USRE emery
+
+<span class="hljs-comment"># &#x6307;&#x5B9A;UID</span>
+USER UID
+</code></pre>
+<blockquote>
+<p>&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E86;&#x5BB9;&#x5668;&#x4EE5;emery&#x7528;&#x6237;&#x53BB;&#x8FD0;&#x884C;&#xFF0C;&#x90A3;&#x4E48;RUN, CMD &#x548C; ENTRYPOINT &#x90FD;&#x4F1A;&#x4EE5;&#x8FD9;&#x4E2A;&#x7528;&#x6237;&#x53BB;&#x8FD0;&#x884C;,
+&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x4E00;&#x5B9A;&#x8981;&#x786E;&#x8BA4;&#x5BB9;&#x5668;&#x4E2D;&#x62E5;&#x6709;&#x8FD9;&#x4E2A;&#x7528;&#x6237;&#xFF0C;&#x5E76;&#x4E14;&#x62E5;&#x6709;&#x8DB3;&#x591F;&#x6743;&#x9650;</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>WORKDIR</strong></p>
+<ul>
+<li><p><strong>&#x63CF;&#x8FF0;</strong></p>
+<p>&#x8BBE;&#x7F6E;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;</p>
+</li>
+<li><p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre><code class="lang-bash">WORKDIR /opt/aaa
+</code></pre>
+</li>
+</ul>
+</li>
+</ol>
 
                                 
                                 </section>
@@ -771,12 +1000,8 @@
 
             
                 
-                <a href="3.2 部署centos容器.html" class="navigation navigation-prev " aria-label="Previous page: 3.2 部署centos容器">
-                    <i class="fa fa-angle-left"></i>
-                </a>
                 
-                
-                <a href="3.4 容器的导出导入.html" class="navigation navigation-next " aria-label="Next page: 3.4 容器的导出导入">
+                <a href="6.2 构建centos镜像.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 6.2 构建centos镜像">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -787,7 +1012,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3.3 容器的提交","level":"1.4.3","depth":2,"next":{"title":"3.4 容器的导出导入","level":"1.4.4","depth":2,"path":"第3章 Docker Container/3.4 容器的导出导入.md","ref":"第3章 Docker Container/3.4 容器的导出导入.md","articles":[]},"previous":{"title":"3.2 部署centos容器","level":"1.4.2","depth":2,"path":"第3章 Docker Container/3.2 部署centos容器.md","ref":"第3章 Docker Container/3.2 部署centos容器.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","expandable-chapters","back-to-top-button","code","favicon-absolute","hide-element","insert-logo","donate"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"code":{"copyButtons":true},"donate":{"alipay":"https://minio.lyqzhpt.com/typora/alipay.jpg","alipayText":"支付宝","button":"欢迎赞赏","title":"","wechat":"https://minio.lyqzhpt.com/typora/wechatpay.jpg","wechatText":"微信"},"favicon-absolute":{"appleTouchIconMore":{},"appleTouchIconPrecomposed152":"docker.ico","appleTouchIconPrecomposedMore":{},"favicon":"docker.ico"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 32px; min-height: 32px","url":"https://minio.lyqzhpt.com/typora/docker.png"},"expandable-chapters":{}},"theme":"default","author":"杨文成 <cheng2guen@163.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Docker从入门到放弃》","gitbook":"*","description":"docker常用功能介绍"},"file":{"path":"第3章 Docker Container/3.3 容器的提交.md","mtime":"2023-05-17T13:11:56.355Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-05-23T07:10:58.029Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6.1 Dockerfile参数介绍","level":"1.7.1","depth":2,"next":{"title":"6.2 构建centos镜像","level":"1.7.2","depth":2,"path":"第6章 Dockerfile/6.2 构建centos镜像.md","ref":"第6章 Dockerfile/6.2 构建centos镜像.md","articles":[]},"previous":{"title":"第6章 Dockerfile","level":"1.7","depth":1,"ref":"","articles":[{"title":"6.1 Dockerfile参数介绍","level":"1.7.1","depth":2,"path":"第6章 Dockerfile/6.1 Dockerfile参数介绍.md","ref":"第6章 Dockerfile/6.1 Dockerfile参数介绍.md","articles":[]},{"title":"6.2 构建centos镜像","level":"1.7.2","depth":2,"path":"第6章 Dockerfile/6.2 构建centos镜像.md","ref":"第6章 Dockerfile/6.2 构建centos镜像.md","articles":[]},{"title":"6.3 构建ubuntu镜像","level":"1.7.3","depth":2,"path":"第6章 Dockerfile/6.3 构建ubuntu镜像.md","ref":"第6章 Dockerfile/6.3 构建ubuntu镜像.md","articles":[]},{"title":"6.4 构建springboot镜像","level":"1.7.4","depth":2,"path":"第6章 Dockerfile/6.4 构建springboot镜像.md","ref":"第6章 Dockerfile/6.4 构建springboot镜像.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","expandable-chapters","back-to-top-button","code","favicon-absolute","hide-element","insert-logo","donate"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"code":{"copyButtons":true},"donate":{"alipay":"https://minio.lyqzhpt.com/typora/alipay.jpg","alipayText":"支付宝","button":"欢迎赞赏","title":"","wechat":"https://minio.lyqzhpt.com/typora/wechatpay.jpg","wechatText":"微信"},"favicon-absolute":{"appleTouchIconMore":{},"appleTouchIconPrecomposed152":"docker.ico","appleTouchIconPrecomposedMore":{},"favicon":"docker.ico"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 32px; min-height: 32px","url":"https://minio.lyqzhpt.com/typora/docker.png"},"expandable-chapters":{}},"theme":"default","author":"杨文成 <cheng2guen@163.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Docker从入门到放弃》","gitbook":"*","description":"docker常用功能介绍"},"file":{"path":"第6章 Dockerfile/6.1 Dockerfile参数介绍.md","mtime":"2023-05-22T03:47:02.555Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-05-23T07:10:58.029Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
